@@ -1,0 +1,55 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #333;
+    color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    font-size: 5vw;
+    margin: 50px 0;
+}
+
+form {
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 1200px;
+    min-width: 400px;
+}
+.task{
+    position: relative;
+
+}
+form label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    font-size: 25px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+form input {
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+form button {
+    padding: 15px;
+    font-size: 20px;
+}
+
+form .task:focus-within label,
+form .task.animation label{
+    top:0px;
+    transform: translateY(-100%);
+    color:#f1f1f1;
+}
